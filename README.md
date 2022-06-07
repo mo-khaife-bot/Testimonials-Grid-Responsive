@@ -2,11 +2,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://responsive-404-page.netlify.app/">
+    <a href="https://mo-khaife-bot.github.io/Testimonials-Grid-Responsive/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/mo-khaife-bot/responsive-404-not-found">
+    <a href="https://github.com/mo-khaife-bot/Testimonials-Grid-Responsive">
       Solution
     </a>
     <span> | </span>
@@ -22,7 +22,9 @@
 
 - [Overview](#overview)
 - [Built with](#built-with)
+- [Live Demo](#live-demo)
 - [What I learned](#what-i-learned)
+- [Future Features](#Future-Features)
 - [Author](#author)
 
 <br>
@@ -45,43 +47,58 @@ The goal is to build out this testimonials grid section and get it looking as cl
 
 <br>
 
+## Live Demo
+
+[Live- Demo](https://mo-khaife-bot.github.io/Testimonials-Grid-Responsive/)
+
+<br>
+
 ## What I learned
 
-How to utilise CSS Grid to make the layout.
+How to utilise CSS Grid to make the layout on mobile first then utilise media query to make the desktop format.
 
 ```css
-.card--bg-gray-blue {
-  background-color: var(--primary-grayish);
-  color: #fff;
-}
+@media (min-width: 880px) {
+  .wrapper {
+    display: grid;
 
-.card--bg-black-blue {
-  background-color: var(--primary-blackish);
-  color: #fff;
-  grid-area: patrick;
-}
-.card:nth-of-type(5) {
-  grid-area: kira;
-}
-}
-```
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette patrick patrick kira";
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-```css
-.wrapper {
-  display: grid;
-  gap: 30px;
+  .card:nth-of-type(1) {
+    grid-area: daniel;
+  }
 
-  grid-template-areas:
-    "daniel daniel jonathan kira"
-    "jeanette patrick patrick kira";
-  grid-template-columns: repeat(4, 1fr);
+  .card:nth-of-type(2) {
+    grid-area: jonathan;
+  }
+
+  .card:nth-of-type(3) {
+    grid-area: jeanette;
+  }
+
+  .card:nth-of-type(4) {
+    grid-area: patrick;
+  }
+
+  .card:nth-of-type(5) {
+    grid-area: kira;
+  }
 }
 ```
 
 <br>
 
+## Future Features
+
+- include a dark / light button to change theme of the page and make the bright colors dark and visa versa using just JS
+
+<br>
+
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [mo-khaife](https://mo-khaife-site.netlify.app/)
+- Frontend Mentor - [@mo-khaife-bot](https://www.frontendmentor.io/profile/mo-khaife-bot)
