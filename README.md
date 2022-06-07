@@ -52,19 +52,41 @@ The goal is to build out this testimonials grid section and get it looking as cl
 [Live- Demo](https://mo-khaife-bot.github.io/Testimonials-Grid-Responsive/)
 
 <br>
+
 ## What I learned
 
-How to utilise CSS Grid to make the layout.
+How to utilise CSS Grid to make the layout on mobile first then utilise media query to make the desktop format.
 
 ```css
-.wrapper {
-  display: grid;
-  gap: 30px;
+@media (min-width: 880px) {
+  .wrapper {
+    display: grid;
 
-  grid-template-areas:
-    "daniel daniel jonathan kira"
-    "jeanette patrick patrick kira";
-  grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette patrick patrick kira";
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card:nth-of-type(1) {
+    grid-area: daniel;
+  }
+
+  .card:nth-of-type(2) {
+    grid-area: jonathan;
+  }
+
+  .card:nth-of-type(3) {
+    grid-area: jeanette;
+  }
+
+  .card:nth-of-type(4) {
+    grid-area: patrick;
+  }
+
+  .card:nth-of-type(5) {
+    grid-area: kira;
+  }
 }
 ```
 
@@ -72,7 +94,7 @@ How to utilise CSS Grid to make the layout.
 
 ## Future Features
 
-- include a dark / light button to change theme of the page and make the bright colours dark and visa versa using just JS
+- include a dark / light button to change theme of the page and make the bright colors dark and visa versa using just JS
 
 <br>
 
