@@ -22,6 +22,7 @@
 
 - [Overview](#overview)
 - [Built with](#built-with)
+- [Live Demo](#live-demo)
 - [What I learned](#what-i-learned)
 - [Future Features](#Future-Features)
 - [Author](#author)
@@ -46,6 +47,11 @@ The goal is to build out this testimonials grid section and get it looking as cl
 
 <br>
 
+## Live Demo
+
+[Live- Demo](https://mo-khaife-bot.github.io/Testimonials-Grid-Responsive/)
+
+<br>
 ## What I learned
 
 How to utilise CSS Grid to make the layout.
